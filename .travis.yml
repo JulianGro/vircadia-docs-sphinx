@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.8"
+
+install:
+  - pip3 install git+https://github.com/Madders/video.git
+  - pip3 install -U Sphinx==2.4.4
+  - pip3 install --upgrade recommonmark
+  - pip3 install sphinx_rtd_theme
+
+script:
+  - cd docs
+  - make html
