@@ -1,6 +1,4 @@
 language: python
-python:
-  - "3.8"
 
 install:
   - pip3 install git+https://github.com/Madders/video.git
@@ -10,4 +8,8 @@ install:
 
 script:
   - cd docs
-  - make html
+  #- make html
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ];
+    then make html;
+  - if [ "$TRAVIS_BRANCH" = "master" ] && [ "$TRAVIS_PULL_REQUEST" != "false" ];
+    then make html;
