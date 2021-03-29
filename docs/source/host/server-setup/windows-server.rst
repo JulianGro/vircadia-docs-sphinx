@@ -1,8 +1,12 @@
+.. warning::
+    This document is outdated.
+    FIXME: mentions purchasing domain names, only mentions DigitalOcean
+
 #################################
 Host a Domain from a Local Server
 #################################
 
-A local server lets you use your own computer to host your virtual domain on the metaverse. 
+A local server lets you use your own computer to host your virtual domain on the metaverse.
 
 .. warning:: Hosting any kind of server from your home means exposing your network to the world. Therefore, we recommend using local servers only for private events and small gatherings. If you want to host a public domain or advertise your domain in the GoTo app, we recommend using a hosting provider such as DigitalOcean.
 
@@ -22,7 +26,7 @@ At a minimum, the computer that you use for your server should meet our `minimum
 
 To host a domain, you must be running Vircadia's open source `Client + Sandbox <https://vircadia.com/download-vircadia/#interface>`_ software.
 
-.. note:: While we do not publish an installer for Linux computers, you can still run a local domain server on a Linux machine. To do so, you will need to build the application from our code base. For more information, see our `Linux Build Guide <https://github.com/kasenvr/project-athena/blob/kasen/core/BUILD_LINUX.md>`_.
+.. note:: While we do not publish an installer for Linux computers, you can still run a local domain server on a Linux machine. To do so, you will need to build the application from our code base. For more information, see our `Linux Build Guide <https://github.com/vircadia/vircadia/blob/master/BUILD_LINUX.md>`_.
 
 
 ---------------

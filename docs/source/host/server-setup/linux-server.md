@@ -4,24 +4,24 @@ The Vircadia packages can help you get your own domain up and running quickly.
 
 ## Installation
 
-Alongside installation, these packages can also migrate an "Athena" domain to Vircadia. You can run them on an existing Vircadia domain to upgrade it if the original was installed using the package. Packages are currently available for the following distributions:
+You can run these same commands on an existing Vircadia domain to upgrade it if the original domain was installed using the package. Packages are currently available for the following distributions:
 
 ### Ubuntu Server 18.04 LTS
 
 ```sh
-wget https://cdn.vircadia.com/dist/domain-server/ubuntu/vircadia-server_2020.2.4-asteria-20200807-e74cbee-0ubuntu1-1_amd64.deb
-sudo apt-get update && sudo apt-get install ./vircadia-server_2020.2.4-asteria-20200807-e74cbee-0ubuntu1-1_amd64.deb
+wget https://cdn.vircadia.com/dist/domain-server/ubuntu/vircadia-server_2021.1.0-eos-20210220-937e0a5-0ubuntu1-1_amd64.deb
+sudo apt-get update && sudo apt-get install ./vircadia-server_2021.1.0-eos-20210220-937e0a5-0ubuntu1-1_amd64.deb
 ```
 
 ### Amazon Linux 2
 
 ```sh
-sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/vircadia-server-2020.2.4_ASTERIA_20200807_e74cbee-1.amzn2.x86_64.rpm
+sudo yum install https://cdn.vircadia.com/dist/domain-server/amazon-linux/vircadia-server-2021.1.0_EOS_20210213_26894b4-1.amzn2.x86_64.rpm
 ```
 
 ### Unlisted Distribution
 
-If you do not see your distribution listed here, you may compile your own server from source using the [Vircadia builder](https://github.com/kasenvr/vircadia-builder).
+If you do not see your distribution listed here, you may compile your own server from source using the [Vircadia builder](https://github.com/vircadia/vircadia-builder).
     
 ## Configuration
 
@@ -78,7 +78,9 @@ The first two services log a large amount of data to their service journal. Chec
 
 The installation package is configured to permit multiple domains to run on a single server at different port numbers. New servers can be created using the following command:
 
-    /opt/vircadia/new-server <name> <base-port>
+```sh
+/opt/vircadia/new-server <name> <base-port>
+```
 
 where <code>name</code> is a word used to name and manage the domain and <code>base-port</code> must be the the first of a range of four contiguous port numbers not overlapping with any other use on the system.
 

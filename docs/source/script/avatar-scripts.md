@@ -17,21 +17,21 @@ There are two different ways you can add an avatar script to your FST file: eith
     <p>You cannot add scripts to avatars you have purchased from the Marketplace. You can add scripts to custom avatars only. </p>
 </div>
 
-To add an avatar script using the Package Model tools: 
-1. Create a folder called `scripts` in the same location as your FBX file.
+To add an avatar script using the Package Model tools:
+1. Create a folder called `scripts` in the same location as your FBX, GLB, or glTF file.
 2. Copy your avatar script into this new folder.
 3. In Interface, go to **Edit > Package Model as .fst**
-4. For 'Script Directory', enter the path to the `scripts` folder you created above. 
+4. For 'Script Directory', enter the path to the `scripts` folder you created above.
 
-To add an avatar script manually:  
-1. Open the FST file for your avatar in the text editor of your choice.  
+To add an avatar script manually:
+1. Open the FST file for your avatar in the text editor of your choice.
 2. Add a line telling the avatar where to find the script file using the syntax `script = [SCRIPT URL]`.![](_images/add-script.png)
 
 You can add multiple scripts to your avatar by adding multiple `script = url` lines.
 
 ## Example of an Avatar Script
 
-The following script makes your avatar throw balls when its right hand moves. 
+The following script makes your avatar throw balls when its right hand moves.
 
 ```javascript
 function(){
@@ -78,10 +78,10 @@ function(){
 })()
 ```
 
-This example script uses the [MyAvatar](https://apidocs.vircadia.dev/MyAvatar.html) namespace to determine if your avatar's hand moves. Upon detecting movement, the script makes your avatar launch balls. It also uses some other namespaces such as [Entities](https://apidocs.vircadia.dev/Entities.html) (to create the ball you will launch) and [Vec3](https://apidocs.vircadia.dev/Vec3.html) (to determine the right positions and distances). Add it to your avatar to see how it works. 
+This example script uses the [MyAvatar](https://apidocs.vircadia.dev/MyAvatar.html) namespace to determine if your avatar's hand moves. Upon detecting movement, the script makes your avatar launch balls. It also uses some other namespaces such as [Entities](https://apidocs.vircadia.dev/Entities.html) (to create the ball you will launch) and [Vec3](https://apidocs.vircadia.dev/Vec3.html) (to determine the right positions and distances). Add it to your avatar to see how it works.
 
 **See Also**
 
-- [Get Started with Scripting](get-started-with-scripting.html)
-- [Write Your Own Scripts](write-scripts.html)
+- [Get Started with Scripting](get-started-with-scripting)
+- [Write Your Own Scripts](write-scripts)
 - [API Reference](https://apidocs.vircadia.dev)
