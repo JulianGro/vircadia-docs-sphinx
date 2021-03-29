@@ -122,7 +122,7 @@ jobs:
         chmod 600 private_key.pem
         ssh -o StrictHostKeyChecking=no -i private_key.pem gha@vircadia.dev "mkdir -p /var/www/vhosts/vircadia.dev/docs.vircadia.dev/release/jp/ && tar -xvzf /var/www/vhosts/vircadia.dev/docs.vircadia.dev/release/build-jp.tar.gz -C /var/www/vhosts/vircadia.dev/docs.vircadia.dev/release/jp/ && rm /var/www/vhosts/vircadia.dev/docs.vircadia.dev/release/build-jp.tar.gz"
 
-check_warnings:
+  check_warnings:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
